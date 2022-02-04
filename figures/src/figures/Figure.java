@@ -1,5 +1,6 @@
 package figures;
 
-public class Figure {
-
+public abstract class Figure {
+	
+	protected abstract Point centriod();
 }
