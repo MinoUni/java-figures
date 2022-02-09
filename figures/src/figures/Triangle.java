@@ -42,7 +42,7 @@ public class Triangle extends Figure {
 	}
 
 	@Override
-	protected Point centriod() {
+	protected Point centroid() {
 		double x = (pointA.getX() + pointB.getX() + pointC.getX()) / 3;
 		double y = (pointA.getY() + pointB.getY() + pointC.getY()) / 3;
 		return new Point(x, y);
@@ -91,27 +91,6 @@ public class Triangle extends Figure {
 			}
 		}
 		return (result[0] == true && result[1] == true && result[2] == true);
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(pointA, pointB, pointC, sideAB, sideAC, sideBC);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Triangle other = (Triangle) obj;
-		return Objects.equals(pointA, other.pointA) && Objects.equals(pointB, other.pointB)
-				&& Objects.equals(pointC, other.pointC)
-				&& Double.doubleToLongBits(sideAB) == Double.doubleToLongBits(other.sideAB)
-				&& Double.doubleToLongBits(sideAC) == Double.doubleToLongBits(other.sideAC)
-				&& Double.doubleToLongBits(sideBC) == Double.doubleToLongBits(other.sideBC);
 	}
 
 }

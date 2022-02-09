@@ -26,9 +26,8 @@ public class Circle extends Figure {
 	}
 
 	@Override
-	protected Point centriod() {
-		// TODO Auto-generated method stub
-		return null;
+	protected Point centroid() {
+		return new Point(center.getX(), center.getY());
 	}
 
 	@Override
