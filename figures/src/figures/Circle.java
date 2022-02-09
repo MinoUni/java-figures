@@ -37,8 +37,10 @@ public class Circle extends Figure {
 
 	@Override
 	protected boolean isTheSame(Figure figure) {
-		// TODO Auto-generated method stub
-		return false;
+		if (getClass() == figure.getClass()) {
+			Circle other = (Circle) figure;
+			return radius == other.radius;
+		} else return false;
 	}
 
 }
